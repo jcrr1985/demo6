@@ -212,6 +212,7 @@
 					.transition().duration(600)
 					.attr("r", yScale.bandwidth() / 2)
 					.attr("stroke", "transparent")
+					
 				})
 
 			})
@@ -235,6 +236,7 @@
 			.attr("stroke", "transparent")
 			.ease(d3.easeElastic)
 
+
 						
 		  var newG4text = svg.append("g").attr("class","newG4text")
 			
@@ -247,7 +249,9 @@
 			.attr("dy",".4em")
 			.style("font-size",".8em")
 			.style("fill","#FFF")
-			.text(d=>d.growth)
+			.text(d=>d.growth)	.on("end", draw2());
+
+
 	
 		}
 		
@@ -847,12 +851,13 @@
 		}
 
 		draw();
-		draw2();
+		/*draw2();*/
 		draw3();
 		DrawVerticalBarChart()
 		DrawVerticalBarChart2()
 
 		$(window).resize(function() {
+		$(window).resize(function(){location.reload();});
 		  $(".chartDivs1,.chartDivs2,.chartDivs3,.chartDivs4,.chartDivs6,").empty();
 			draw();
 			draw2();
