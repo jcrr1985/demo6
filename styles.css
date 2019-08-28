@@ -1,0 +1,30 @@
+html {
+    height: 98%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 98%;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    text-rendering: geometricPrecision;
+    shape-rendering: geometricPrecision;
+}
+
+.chCols {
+    border: 1px groove #333333;
+}
+
+.halfVh {
+    height: 50vh;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
